@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-function TodoListItem() {
-  return <div>TodoListItem</div>
+function TodoListItem({ name, completed }) {
+  const doTodo = () => {
+    completed = true
+  }
+  return completed ? null : <div onClick={doTodo}>{name}</div>;
 }
 
-export default TodoListItem
+export default TodoListItem;

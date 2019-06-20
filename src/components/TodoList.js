@@ -1,10 +1,15 @@
-import React from 'react'
-import TodoListItem from './TodoListItem'
+import React, { useState } from 'react';
+import TodoListItem from './TodoListItem';
 
-function TodoList() {
-  return <div>
-    <TodoListItem />
-  </div>
+function TodoList({ list }) {
+
+  return (
+    <div>
+      {list.map((item, index) => (
+        <TodoListItem name={item} completed={false} key={index} />
+      ))}
+    </div>
+  );
 }
 
-export default TodoList
+export default TodoList;
