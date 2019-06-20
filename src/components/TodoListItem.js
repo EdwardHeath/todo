@@ -4,7 +4,7 @@ function TodoListItem({ name, completed }) {
   const doTodo = () => {
     completed = true
   }
-  return completed ? null : <div onClick={doTodo}>{name}</div>;
+  return completed ? null : <div onClick={doTodo} className="TodoListItem">{name}</div>;
 }
 
 export default TodoListItem;
